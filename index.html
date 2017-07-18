@@ -38,13 +38,19 @@
 						<p>Scores &amp; reports based on your data from</p>
 						<ul>
 							<li>
-								<img src="assets/images/Experian.png" alt="Experian Link">
+								<a href="#experian" title="Experian link">
+									<img src="assets/images/Experian.png" alt="Experian Link">
+								</a>
 							</li>
 							<li>
-								<img src="assets/images/trans_union.png" alt="TransUnion Link">
+								<a href="#TransUnion" title="TransUnion link">
+									<img src="assets/images/trans_union.png" alt="TransUnion Link">
+								</a>
 							</li>
 							<li>
-								<img src="assets/images/equifax.png" alt="Equifax Link">
+								<a href="#Equifax" title="Equifax link">
+									<img src="assets/images/equifax.png" alt="Equifax Link">
+								</a>
 							</li>
 						</ul>
 						<p>(Scores developed by CreditExpert <sup>&reg;</sup>, Inc.)</p>
@@ -60,100 +66,91 @@
 						<h2>Get your 2013 Credit Report and Scores in  minutes...</h2>
 						<p>when youa activate PivacyGuard<sup>&reg;</sup> credit monitoring with the first 30 days for $1...</p>
 					</div>
-						<div class="form-header">
-							<b>&lt;FirstName&gt;</b>,
-							<b>Please take a moment to set up  your account.</b>
-							<p>ALl information is required</p>.
+					<!-- form header -->
+					<div class="form-header">
+						<span>&lt;FirstName&gt;</span>,
+						<span>Please take a moment to set up  your account.</span>
+						<p>ALl information is required</p>.
+					</div>
+					<!-- form header -->
+					<!-- for line -->
+					<div class="line"></div>
+					<!--end  for line -->
+					<!-- Create username & password -->
+					<form name="signup" method="post" >
+					<section class="form-create">
+						<div class="enter-section">
+							<label for="username-field">
+								Desired Username <span>(4-25 characters)</span>
+							</label>
+							<!-- username -->
+							<input type="text" name="username" id="username-field" title="Enter username" placeholder="Enter username" required>
+							<!-- email -->
+							<label for="email-field">Email</label>
+							<input type="email" name="email" id="email-field" placeholder="Enter email" title="Enter email" required>
+
+							<!-- Account Password -->
+							<label for="password-feild">Account Password</label>
+							<input type="password" name="password" placeholder="Enter your password" title="Enter your password" id="password-field" required />
 						</div>
-							<hr>
-						<!-- form -->
-						<form method="post" action="">
-							<!-- create username & password -->
-							<div class="form-user-password">
-								<b>Create a Username &amp; Password</b>
-								<table border="1">
-									<tr>
-										<td>Desired Username <span>(4-25 characters)</span></td>
-									</tr>
-									<tr>
-										<td>
-											<input type="text" name="username" title="Enter username" placeholder="Enter username" required>
-										</td>
-									</tr>
-									<tr>
-										<td>Email</td>
-										<td>Verify Email</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="email" name="email" placeholder="Enter email" required>
-										</td>
-										<td>
-											<input type="email" name="verify-email" placeholder="Re-nter email for verification" required>
-										</td>
-									</tr>
-									<tr>
-										<td>Account Password</td>
-										<td>Verify Account Password</td>
-									</tr>
-									<tr>
-										<td><input type="password" name="password" placeholder="Enter your password" required></td>
-										<td><input type="password" name="re-password" placeholder="Re-enter your password" required></td>
-									</tr>
-								</table>
-							</div>
-							<!-- end create username & password -->
-							<!-- form -verifcation -->
-							<div class="form-verfication">
-								<hr>
-								<b>Verification Number</b>
-								<p>Please enter your social number to confirm your identity. Your information will be securely transmitted to credit reporting agencies</p>
-								<table border="1">
-									<tr>
-										<td>Social Security Number</td>
-										<td>Verify Social Security Number</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="number"  name="first_security" required> - 
-											<input type="number" name="second_security" required> -
-											<input type="number" name="third_security" required>
-										</td>
-										<td>
-											<input type="number" name="ve_first_security" required> - 
-											<input type="number" name="ve_second_security" required> -
-											<input type="number" name="ve_third_security" required>
-										</td>
-									</tr>
-									<tr>
-										<td>Date of Birth<span>(mm/dd/yyyy)</span></td>
-										<td>
-											<input type="text" name="dob"><i class="fa fa-question-circle"></i>
-										</td>
-									</tr>		
-								</table>
-							</div>
-						<!-- end form-verification -->
-						<!-- billing-info -->
-							<div class="billing-info">
-								<table border="1">
-									<tr>
-										<td>Card Type</td>
-										<td>Expiration Date</td>
-									</tr>
-									<tr>
-										<td>
-											<select class="card-types">
-												<option>Credit Card</option>
-												<option>Master Card</option>
-												<option>Debit Card</option>
-												<option>Green Card</option>
-												<option>Swiss Card</option>
-											</select>
-											<img class="card-img" src="assets/images/ccmc.png" alt="master-card -visa card">
-										</td>
-										<td>
-											<select class="month">
+
+						<div class="verify-section">
+							<!-- verify email -->
+							<label for="verify-email-field">Verify Email</label>
+							<input type="email" name="verify-email" id="verify-email-field" placeholder="Re-nter email for verification" title="Re-nter email for verification" required />
+							<!-- verify account password  -->
+							<label for="re-password">Verify Account Password</label>
+							<input type="password" id="re-password" name="re-password" placeholder="Re-enter your password" required />							
+						</div>
+					</section>
+					<!-- end Create username & password -->
+					<div class="line"></div>
+				<!-- social section -->
+					<section class="social-section">
+						<span>Verification Number</span>
+						<p>Please enter your social number to confirm your identity. Your information will be securely transmitted to credit reporting agencies</p>
+						<div class="security-section">
+							<!-- social security -->
+							<p>Social Security Number</p>
+							<input type="number"  name="first_security" minlength="5" placeholder="030" title="Enter Security pin" required>
+							<input type="number" name="second_security" placeholder="4444" title="Enter Security pin" required>
+							<input type="number" name="third_security" title="Enter Security pin" placeholder="345677890" required>
+							<!-- dob -->
+							<p>Date of Birth</p><span>(mm/dd/yyyy)</span>
+							<input type="date" placeholder="Enter dob birth" title="Enter date of birth" name="dob"><i class="fa fa-question-circle"></i>
+						</div>
+						<div class="verify-social-section">
+							<!-- verify soical security -->
+							<p>Verify Social Security Number</p>
+							<input type="number" name="ve_first_security" placeholder="Re-enter security pin" title="Re-enter security pin" required> - 
+							<input type="number" name="ve_second_security" placeholder="Re-enter security pin" title="Re-enter security pin" required> -
+							<input type="number" name="ve_third_security" placeholder="Re-enter security pin" title="Re-enter security pin" required>
+						</div>
+					</section>
+				<!--end  social section -->
+					<div class="line"></div>
+				<!-- billing section  -->
+					<section class="billing-section">
+						<div class="card-section">
+								<p>Card type</p>
+								<select class="card-types">
+									<option>Credit Card</option>
+									<option>Master Card</option>
+									<option>Debit Card</option>
+									<option>Green Card</option>
+									<option>Swiss Card</option>
+								</select>
+									<img class="card-img" src="assets/images/ccmc.png" alt="master-card -visa card">
+									<p>Card Number</p>
+									<input type="number" max="16" maxlength="16" placeholder="Enter credit number" name="credit-number">
+								<div class="sponsor-security">
+										<img src="assets/images/Norton_av_logo.png" height="70px" width="70px" class="Norton Secured">
+										<img src="assets/images/vcs.png" height="70px" width="70px" alt="version Cybertrust Security " >
+								</div>
+						</div>
+						<div class="expiration-section">
+							<p>Expiration Date</p>
+							<select class="month" name="month-exp">
 												<option>Month</option>
 												<option>January</option>
 												<option>February</option>
@@ -169,7 +166,7 @@
 												<option>November</option>
 												<option>December</option>
 											</select>
-											<select class="year">
+											<select class="year" class="year-exp">
 												<option>Year</option>
 												<option>2017</option>
 												<option>2018</option>
@@ -179,40 +176,28 @@
 												<option>2022</option>
 												<option>2023</option>
 												<option>2024</option>
-										</td>
-									</tr>
-									<tr>
-										<td>Card Number</td>
-											<td rowspan="2">
-											<img src="assets/images/Norton_av_logo.png" height="70px" width="70px" class="Norton Secured">
-											<img src="assets/images/vcs.png" height="70px" width="70px" alt="version Cybertrust Security " >
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="number" max="16" maxlength="16" name="credit-number">
-										</td>
-									</tr>
-								</table>
-							</div>
-						<!--end  billing  info -->
-						<!-- form term -->
-							<div class="form-term-section">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</div>
+											</select>
+						</div>
+					</section>
+				<!--end billing section  -->
+					<!-- form term -->
+						<div class="form-term-section">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</div>
 
-							<div class="form-btn">
-								<input type="submit" name="" value="Yes, Sign me Up!">
-							</div>
-						<!-- end form term -->
+						<div class="form-btn">
+							<input type="submit" name="submit-btn" value="Yes, Sign me Up!">
+						</div>
 						</form>
-						<!-- endform -->
+					<!-- end form term -->
+					
 				</section>
+				<!-- privacy section -->
 				<section class="privacy-sec-section">
 					<div class="lock-div">
 						<img src="assets/images/padlock.png" alt="padlock icon">
@@ -243,6 +228,34 @@
 			</div>
 		</section>
 		<!--end  content section -->
+
+		<!-- footer section -->
+		<section class="footer-content">
+			<p>&copy; 2013 Trigellant Corporation, Inc. 6 high Ridge Park, Stamford. CT 06905 </p> 
+			<nav>
+				<ul>
+					<li>
+						<a href="#terms-condition" title="Terms & Conditions">Term &amp; Condition</a>
+					</li>
+					<li>
+						<a href="#terms-condition" title="Terms & Conditions">Privacy Policy</a>
+					</li>
+					<li><a href="#terms-condition" title="Terms & Conditions">Fair credit Reporting Act</a></li>
+				</ul>
+			</nav>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
+		<!--end footer section -->
 		
 	</div>
 <!-- end container -->
